@@ -1,29 +1,30 @@
-
-
-
 new_paciente = "SI"
 paciente = 0
 sSis = 0
 sDia = 0
 m = 1
-while new_paciente == "SI":
+while new_paciente == "SI" or new_paciente == "S":
     paciente += 1
     name = input("Ingresa el nombre: ")
     ts = input("Ingresa el tipo de sangre: ")
     for i in range(3):
         print(f"MEDICION {m}")
         sis = int(input("Ingresa el valor de SIStolica: "))
-        sSis += sis
-        dia = int(input("Ingresa el valor de DIAtolica: "))
-        sDia += dia
+        sSis += int(sis)
+        dia = input("Ingresa el valor de DIAtolica: ")
+        sDia += int(dia)
         m +=1
-
+    
+    mSISFinal = input("Ingresa la medicion final:") #ADD
+    mDIAFinal = input("Ingresa la medicion final:") #ADD
     
     promedioSis = sSis / 3
     promedioDia = sDia / 3
 
     print(f"Nombre: {name}")
     print(f"Tipo de sangre: {ts}")
+    print(f"Ultima medicion: {mSISFinal}") #ADD
+    print(f"Ultima medicion: {mDIAFinal}") #ADD
     if promedioSis <= 120 and promedioDia <= 80:
         print("Presenta una precion normal")
 
