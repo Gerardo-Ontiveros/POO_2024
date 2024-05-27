@@ -15,6 +15,7 @@ while new_paciente == "SI" or new_paciente == "S":
         sDia += int(dia)
         m +=1
     
+    #Add Input to record the last measurement
     mSISFinal = input("Ingresa la medicion final:") #ADD
     mDIAFinal = input("Ingresa la medicion final:") #ADD
     
@@ -23,8 +24,9 @@ while new_paciente == "SI" or new_paciente == "S":
 
     print(f"Nombre: {name}")
     print(f"Tipo de sangre: {ts}")
-    print(f"Ultima medicion: {mSISFinal}") #ADD
-    print(f"Ultima medicion: {mDIAFinal}") #ADD
+    #Add lines to print the las measurement
+    print(f"Ultima medicion SIS: {mSISFinal}") #ADD
+    print(f"Ultima medicion DIA: {mDIAFinal}") #ADD
     if promedioSis <= 120 and promedioDia <= 80:
         print("Presenta una precion normal")
 
